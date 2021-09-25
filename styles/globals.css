@@ -34,8 +34,8 @@ a {
 }
 
 .card {
-  width: 30vw;
-  height: 20vh;
+  width: 20vw;
+  height: 17vh;
   margin: 5px;
   border-radius: 5%;
   filter: drop-shadow(5px 5px 10px #000);
