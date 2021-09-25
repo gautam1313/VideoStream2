@@ -3,12 +3,16 @@ import Link from "next/link";
 import Image from "next/image";
 import logo from "../public/disney.png";
 
-const NavBar = () => {
+const NavBar = ({ account }) => {
   return (
     <div className="navbar">
       <Link href="/">
         <Image src={logo} alt="Disney Logo" height={50} width={90} />
       </Link>
+      <div className="account-info">
+        <p>Welcome {account.username}</p>
+        <img className="avatar" src={account.avatar.url} />
+      </div>
     </div>
   );
 };
