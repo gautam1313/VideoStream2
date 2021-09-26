@@ -34,9 +34,9 @@ a {
 }
 
 .card {
-  width: 20vw;
+  width: 19.2%;
   height: 17vh;
-  margin: 5px;
+  margin: 0.4%;
   border-radius: 5%;
   filter: drop-shadow(5px 5px 10px #000);
 }
@@ -46,6 +46,7 @@ a {
   height: 80px;
   display: flex;
   justify-content: space-between;
+  padding-top: 20px;
 }
 
 .video-image {
@@ -80,6 +81,7 @@ a {
 .account-info {
   display: flex;
   height: 50%;
+  margin-top: 10px;
 }
 
 .avatar {
@@ -87,4 +89,19 @@ a {
   height: 50px;
   border-radius: 50%;
   margin-left: 10px;
+}
+
+.franchise {
+  background-color: #808080;
+  width: 20%;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.video-feed {
+  display: flex;
+}
+
+.logo-container {
+  padding: 10px 30px;
 }
