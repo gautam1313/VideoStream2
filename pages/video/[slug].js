@@ -41,6 +41,16 @@ export const getServerSideProps = async (pageContext) => {
   };
 };
 
+const watchedMovie = async (slug) => {
+  await fetch("/api/watchedMovie", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ slug }),
+  });
+};
+
 const Video = ({ video }) => {
   const [watching, setWatching] = useState(false);
   console.log(video);
@@ -62,6 +72,7 @@ const Video = ({ video }) => {
             <button
               className="video-overlay"
               onClick={() => {
+                watchedMovie(video.slug);
                 setWatching(true);
               }}
             >
