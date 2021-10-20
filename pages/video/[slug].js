@@ -1,5 +1,6 @@
 import { gql, GraphQLClient } from "graphql-request";
 import { useState } from "react";
+import Link from "next/link";
 
 export const getServerSideProps = async (pageContext) => {
   const pageSlug = pageContext.query.slug;
@@ -9,7 +10,7 @@ export const getServerSideProps = async (pageContext) => {
     },
   });
   const query = gql`
-    query($pageSlug: String) {
+    query ($pageSlug: String) {
       video(where: { slug: $pageSlug }) {
         createdAt
         id
@@ -66,7 +67,7 @@ const Video = ({ video }) => {
           <div className="info">
             <p>{video.tags.join(", ")}</p>
             <p>{video.description}</p>
-            <a href="/">go back</a>
+            <Link href="/">go back</Link>
             <br />
             <br />
             <button
